@@ -1,0 +1,225 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a {
+    margin-left: 1.5rem;
+    /* margin-right: ; */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #555;
+}
+
+.signup {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+.signup:hover {
+    background-color: #333;
+}
+
+.main {
+    padding: 1.5rem;
+}
+
+.category {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.category-label {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 1.125rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.product-card h3 {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.product-card p {
+    color: #777;
+}
+
+.product-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.product-card a:hover {
+    color: #555;
+}
+
+.join-community {
+    background-color: #fbbf24;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.join-community h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.join-community p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.email-form {
+    display: flex;
+    justify-content: center;
+}
+
+.email-form input {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+    border: none;
+    width: 16rem;
+}
+
+.email-form button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0.25rem 0.25rem 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-form button:hover {
+    background-color: #333;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 3rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.footer-section h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.social-icons a {
+    color: #777;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .footer-section {
+        width: 22%;
+    }
+}

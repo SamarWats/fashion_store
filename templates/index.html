@@ -1,0 +1,327 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-tshirt"></i> FASHION
+        </div>
+        <nav class="nav">
+            <a href="#">CATALOGUE</a>
+            <a href="#">FASHION</a>
+            <a href="#">FAVOURITE</a>
+            <a href="#">LIFESTYLE</a>
+            <a href="#" class="signup">SIGN UP</a>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    {% comment %} <main class="main">
+        <div class="category">
+            <span class="category-label">T-Shirts</span>
+            <select id="category-select" onchange="filterCategory()">
+                <option value="">Select a Category</option>
+                <option value="T-Shirts">T-Shirts</option>
+                <option value="Pants">Pants</option>
+                <option value="Dresses">Dresses</option>
+            </select>
+        </div>
+        
+        <h2 class="section-title">NEW TRENDY DESIGNS</h2>
+        
+
+
+
+        <div class="product-grid">
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'Round-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg', '850')">
+                <img src="https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg" alt="Person wearing a round-neck t-shirt">
+                <h3>Round-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'Round-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg', '850');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750')">
+                <img src="https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg" alt="Person wearing a u-neck t-shirt">
+                <h3>U-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750')">
+                <img src="https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg" alt="Person wearing a u-neck t-shirt">
+                <h3>U-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'Polo T-Shirts', 'https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg', '900')">
+                <img src="https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg" alt="Person wearing a polo t-shirt">
+                <h3>Polo T-shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'Polo T-Shirts', 'https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg', '900');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Repeat the above 4 product cards two more times to match the screenshot -->
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'Round-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg', '850')">
+                <img src="https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg" alt="Person wearing a round-neck t-shirt">
+                <h3>Round-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'Round-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg', '850');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750')">
+                <img src="https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg" alt="Person wearing a u-neck t-shirt">
+                <h3>U-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'V-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/aIIy_o-rbqiQEXZ-m1UUEvTVaxAo7u8Qloz6YJ3mCrQ.jpg', '780')">
+                <img src="https://storage.googleapis.com/a1aa/image/aIIy_o-rbqiQEXZ-m1UUEvTVaxAo7u8Qloz6YJ3mCrQ.jpg" alt="Person wearing a v-neck t-shirt">
+                <h3>V-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'V-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/aIIy_o-rbqiQEXZ-m1UUEvTVaxAo7u8Qloz6YJ3mCrQ.jpg', '780');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'Polo T-Shirts', 'https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg', '900')">
+                <img src="https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg" alt="Person wearing a polo t-shirt">
+                <h3>Polo T-shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'Polo T-Shirts', 'https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg', '900');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'Round-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg', '850')">
+                <img src="https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg" alt="Person wearing a round-neck t-shirt">
+                <h3>Round-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'Round-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/BSJ03C00vBolsrrh_MkSz-Lxq-FSLj6QrJ-v1uSne-0.jpg', '850');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750')">
+                <img src="https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg" alt="Person wearing a u-neck t-shirt">
+                <h3>U-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'U-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/lCsCUY0fmzUL0U6evVcRLR2jdp-2jejNZQGIjOE5Rr4.jpg', '750');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>            
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'V-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/aIIy_o-rbqiQEXZ-m1UUEvTVaxAo7u8Qloz6YJ3mCrQ.jpg', '780')">
+                <img src="https://storage.googleapis.com/a1aa/image/aIIy_o-rbqiQEXZ-m1UUEvTVaxAo7u8Qloz6YJ3mCrQ.jpg" alt="Person wearing a v-neck t-shirt">
+                <h3>V-Neck T-Shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'V-Neck T-Shirts', 'https://storage.googleapis.com/a1aa/image/aIIy_o-rbqiQEXZ-m1UUEvTVaxAo7u8Qloz6YJ3mCrQ.jpg', '780');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card" onclick="viewProduct('T-Shirts', 'Polo T-Shirts', 'https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg', '900')">
+                <img src="https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg" alt="Person wearing a polo t-shirt">
+                <h3>Polo T-shirts</h3>
+                <p>Explore Now!</p>
+                <a href="#" onclick="event.stopPropagation(); viewProduct('T-Shirts', 'Polo T-Shirts', 'https://storage.googleapis.com/a1aa/image/MLcgLIIK1OvBiziaMX_HNCCGNW_YHQ-eTckS5xLU49E.jpg', '900');">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main> {% endcomment %}
+
+    <main class="main">
+        <div class="category">
+            <span class="category-label">T-Shirts</span>
+            <select id="category-select" onchange="filterCategory()">
+                <option value="">Select a Category</option>
+                <option value="T-Shirts">T-Shirts</option>
+                <option value="Pants">Pants</option>
+                <option value="Dresses">Dresses</option>
+            </select>
+        </div>
+        
+        <h2 class="section-title">NEW TRENDY DESIGNS</h2>
+        
+        <div class="product-grid" id="product-container">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </main>
+    <!-- Join Community Section -->
+    <section class="join-community">
+        <h2>JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO</h2>
+        <p>Type your email down below and be young wild generation</p>
+        <div class="email-form">
+            <input type="email" placeholder="Add your email here">
+            <button>SEND</button>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>FASHION</h3>
+                <p>Complete your style with awesome clothes from us.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Link</h3>
+                <ul>
+                    <li><a href="#">Share Location</a></li>
+                    <li><a href="#">Orders Tracking</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function viewProduct(category, name, image, price) {
+            const url = `product-details.html?category=${encodeURIComponent(category)}&name=${encodeURIComponent(name)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}`;
+            window.location.href = url;
+        }
+    </script>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const categoryDropdown = document.getElementById("categoryDropdown");
+            const productContainer = document.getElementById("productContainer");
+        
+            // Function to fetch categories and populate dropdown
+            function fetchCategories() {
+                fetch("/api/categories/")
+                    .then(response => response.json())
+                    .then(categories => {
+                        categoryDropdown.innerHTML = '<option value="">Select Category</option>';
+                        categories.forEach(category => {
+                            let option = document.createElement("option");
+                            option.value = category.id;
+                            option.textContent = category.name;
+                            categoryDropdown.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error("Error fetching categories:", error));
+            }
+        
+            // Function to fetch products based on selected category
+            function fetchProducts(categoryId) {
+                if (!categoryId) {
+                    productContainer.innerHTML = "<p>Please select a category to view products.</p>";
+                    return;
+                }
+        
+                fetch(`/api/products/${categoryId}/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        productContainer.innerHTML = "";
+                        if (data.products.length === 0) {
+                            productContainer.innerHTML = "<p>No products available for this category.</p>";
+                            return;
+                        }
+        
+                        data.products.forEach(product => {
+                            let productCard = document.createElement("div");
+                            productCard.classList.add("product-card");
+                            productCard.innerHTML = `
+                                <img src="${product.image}" alt="${product.name}" />
+                                <h3>${product.name}</h3>
+                                <p>Price: $${product.price}</p>
+                                <button onclick="viewProduct('${product.id}')">View Details</button>
+                            `;
+                            productContainer.appendChild(productCard);
+                        });
+                    })
+                    .catch(error => console.error("Error fetching products:", error));
+            }
+        
+            // Event listener for category selection
+            categoryDropdown.addEventListener("change", function () {
+                const selectedCategory = categoryDropdown.value;
+                fetchProducts(selectedCategory);
+            });
+        
+            // Function to navigate to product details page
+            function viewProduct(productId) {
+                window.location.href = `/product-details.html?product_id=${productId}`;
+            }
+        
+            // Initial function calls
+            fetchCategories();
+        });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", fetchProducts);
+            
+            function fetchProducts() {
+                fetch('/api/products')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.getElementById('product-container');
+                        container.innerHTML = '';
+                        data.forEach(product => {
+                            const productCard = document.createElement('div');
+                            productCard.classList.add('product-card');
+                            productCard.setAttribute("onclick", `viewProduct('${product.category}', '${product.name}', '${product.image}', '${product.price}')`);
+                            
+                            productCard.innerHTML = `
+                                <img src="${product.image}" alt="${product.name}">
+                                <h3>${product.name}</h3>
+                                <p>Explore Now!</p>
+                                <a href="#" onclick="event.stopPropagation(); viewProduct('${product.category}', '${product.name}', '${product.image}', '${product.price}');">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            `;
+                            container.appendChild(productCard);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching products:', error));
+            }
+        </script>
+        
+</body>
+</html>

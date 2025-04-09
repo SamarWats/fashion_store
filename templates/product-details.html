@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link rel="stylesheet" href="../static/css/product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FASHION</div>
+        <nav class="nav">
+            <a href="index.html">CATALOGUE</a>
+            <a href="index.html">FASHION</a>
+            <a href="index.html">FAVOURITE</a>
+            <a href="index.html">LIFESTYLE</a>
+            <a href="index.html" class="signup">SIGN UP</a>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="tags" id="tags"></div>
+        <div class="image-container">
+            <img id="product-image" src="" alt="Product Image">
+            <div class="arrow-container"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="details" id="product-details"></div>
+        <div class="related-products">
+            <h2>Related Products</h2>
+            <div class="products" id="related-products"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="footer-logo">FASHION</div>
+            <p>Complete your style with awesome clothes from us.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get("productId");
+            
+            if (productId) {
+                fetch(`/api/product/${productId}/`)
+                    .then(response => response.json())
+                    .then(product => {
+                        document.getElementById("product-image").src = product.image;
+                        document.getElementById("tags").innerHTML = `<div class="tag">${product.category}</div>`;
+                        document.getElementById("product-details").innerHTML = `
+                            <div class="detail"><div class="label">Fabric :</div><div class="value">${product.fabric}</div></div>
+                            <div class="detail"><div class="label">Sizes :</div><div class="value">${product.sizes.join(", ")}</div></div>
+                            <div class="detail"><div class="label">Colors :</div><div class="value">${product.colors.join(", ")}</div></div>
+                            <div class="detail"><div class="label">Price :</div><div class="value">₹${product.price}</div></div>
+                        `;
+                    });
+                
+                fetch(`/api/products/related/${productId}/`)
+                    .then(response => response.json())
+                    .then(related => {
+                        document.getElementById("related-products").innerHTML = related.map(item => `
+                            <div class="product">
+                                <img src="${item.image}" alt="${item.name}">
+                                <div class="product-name">${item.name}</div>
+                                <div class="product-desc">Explore Now!</div>
+                            </div>
+                        `).join('');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
